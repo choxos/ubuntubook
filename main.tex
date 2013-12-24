@@ -1,0 +1,70 @@
+\documentclass[12pt,oneside]{book}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\hypersetup{
+	linktoc=all, 
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{%
+\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{%
+\markright{\thesection\ #1}}
+\fancyhf{} % delete current header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % space for the rule
+\fancypagestyle{plain}{%
+\fancyhead{} % get rid of headers on plain pages
+\renewcommand{\headrulewidth}{0pt} % and the line
+}
+\usepackage{xepersian}
+\settextfont[Scale=1.1]{Nazli}%{XB Niloofar}
+\setlatintextfont[Scale=1]{Ubuntu}
+%\setdigitfont[Scale=1]{XB Zar}
+\defpersianfont\Sayeh[Scale=1]{XB Kayhan Sayeh}
+
+
+\title{
+{\small به نام خدا\\}
+\vspace{5cm}
+اوبونتو برای تازه‌واردها\\}
+\author{ساسان نمیریان\\
+نوا اژدری\\
+احمد صوفی محمودی\\\\\\
+\lr{http://www.ubuntu-book.org}\\
+\lr{info@ubuntu-book.org}
+}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\input{preface}
+
+\mainmatter
+\input{chaptr1}
+\input{chaptr2}
+\input{chaptr3}
+
+\printindex
+
+\end{document}
